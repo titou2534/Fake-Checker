@@ -161,9 +161,9 @@ def score(l: Listing) -> Result:
 
     # brand
     if brand in HIGH_RISK_BRANDS:
-        add("counterfeit", 0.9, f"'{l.brand}' is one of the most counterfeited brands")
+        add("counterfeit", 0.9, f"'{l.brand.strip()}' is one of the most counterfeited brands")
     elif brand in MEDIUM_RISK_BRANDS:
-        add("counterfeit", 0.4, f"'{l.brand}' is commonly counterfeited")
+        add("counterfeit", 0.4, f"'{l.brand.strip()}' is commonly counterfeited")
 
     # price
     if l.market_price and l.market_price > 0 and l.price > 0:
