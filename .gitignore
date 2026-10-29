@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# raw Reddit posts (other people's content; rebuild with collect_reddit.py + label_complaints.py)
+data/reddit_posts.csv
+data/labeled_posts.csv
+data/*.partial.csv
+
+# local tooling
+.claude/
+.DS_Store

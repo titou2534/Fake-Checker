@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Fake Checker: open app",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "/opt/anaconda3/bin/python",
+      "module": "streamlit",
+      "args": ["run", "${workspaceFolder}/app.py"],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "1. Collect Reddit posts",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "/opt/anaconda3/bin/python",
+      "program": "${workspaceFolder}/collect_reddit.py",
+      "args": ["--per-sub", "1500"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "2. Label complaints",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "/opt/anaconda3/bin/python",
+      "program": "${workspaceFolder}/label_complaints.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "3. Train text model",
+      "type": "debugpy",
+      "request": "launch",
+      "python": "/opt/anaconda3/bin/python",
+      "program": "${workspaceFolder}/train_text_model.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

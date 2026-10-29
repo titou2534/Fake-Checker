@@ -1,0 +1,110 @@
+{
+  "depop": {
+    "posts": 1500,
+    "counterfeit_rate": 0.0407,
+    "non_delivery_rate": 0.086,
+    "off_platform_rate": 0.0053,
+    "account_fraud_rate": 0.0027,
+    "not_as_described_rate": 0.064,
+    "buyer_fraud_rate": 0.004,
+    "risk_post_rate": 0.1267,
+    "refund_win_rate": 0.875,
+    "refund_outcomes_seen": 24
+  },
+  "ebay": {
+    "posts": 3000,
+    "counterfeit_rate": 0.031,
+    "non_delivery_rate": 0.048,
+    "off_platform_rate": 0.0083,
+    "account_fraud_rate": 0.0047,
+    "not_as_described_rate": 0.0647,
+    "buyer_fraud_rate": 0.008,
+    "risk_post_rate": 0.084,
+    "refund_win_rate": 0.8,
+    "refund_outcomes_seen": 15
+  },
+  "grailed": {
+    "posts": 1500,
+    "counterfeit_rate": 0.056,
+    "non_delivery_rate": 0.0213,
+    "off_platform_rate": 0.0093,
+    "account_fraud_rate": 0.0053,
+    "not_as_described_rate": 0.0093,
+    "buyer_fraud_rate": 0.0047,
+    "risk_post_rate": 0.0847,
+    "refund_win_rate": null,
+    "refund_outcomes_seen": 0
+  },
+  "mercari": {
+    "posts": 1500,
+    "counterfeit_rate": 0.0473,
+    "non_delivery_rate": 0.0693,
+    "off_platform_rate": 0.0107,
+    "account_fraud_rate": 0.004,
+    "not_as_described_rate": 0.046,
+    "buyer_fraud_rate": 0.0027,
+    "risk_post_rate": 0.122,
+    "refund_win_rate": 0.778,
+    "refund_outcomes_seen": 9
+  },
+  "poshmark": {
+    "posts": 1500,
+    "counterfeit_rate": 0.0527,
+    "non_delivery_rate": 0.038,
+    "off_platform_rate": 0.0047,
+    "account_fraud_rate": 0.006,
+    "not_as_described_rate": 0.0587,
+    "buyer_fraud_rate": 0.0033,
+    "risk_post_rate": 0.0973,
+    "refund_win_rate": 0.833,
+    "refund_outcomes_seen": 6
+  },
+  "therealreal": {
+    "posts": 1001,
+    "counterfeit_rate": 0.1029,
+    "non_delivery_rate": 0.023,
+    "off_platform_rate": 0.006,
+    "account_fraud_rate": 0.003,
+    "not_as_described_rate": 0.0809,
+    "buyer_fraud_rate": 0.008,
+    "risk_post_rate": 0.1329,
+    "refund_win_rate": 1.0,
+    "refund_outcomes_seen": 6
+  },
+  "thredup": {
+    "posts": 1500,
+    "counterfeit_rate": 0.028,
+    "non_delivery_rate": 0.008,
+    "off_platform_rate": 0.0053,
+    "account_fraud_rate": 0.0007,
+    "not_as_described_rate": 0.0807,
+    "buyer_fraud_rate": 0.002,
+    "risk_post_rate": 0.0387,
+    "refund_win_rate": null,
+    "refund_outcomes_seen": 1
+  },
+  "vestiaire": {
+    "posts": 1500,
+    "counterfeit_rate": 0.1387,
+    "non_delivery_rate": 0.0493,
+    "off_platform_rate": 0.0067,
+    "account_fraud_rate": 0.0007,
+    "not_as_described_rate": 0.0433,
+    "buyer_fraud_rate": 0.0133,
+    "risk_post_rate": 0.1827,
+    "refund_win_rate": 0.611,
+    "refund_outcomes_seen": 18
+  },
+  "vinted": {
+    "posts": 1500,
+    "counterfeit_rate": 0.0453,
+    "non_delivery_rate": 0.0587,
+    "off_platform_rate": 0.0047,
+    "account_fraud_rate": 0.0073,
+    "not_as_described_rate": 0.0493,
+    "buyer_fraud_rate": 0.002,
+    "risk_post_rate": 0.1073,
+    "refund_win_rate": 0.929,
+    "refund_outcomes_seen": 14
+  }
+}

@@ -1,0 +1,8 @@
+{
+  // stop the Python Environments extension overriding the interpreter with the macOS Python
+  "python.useEnvironmentsExtension": false,
+  "python.defaultInterpreterPath": "/opt/anaconda3/bin/python",
+  "python-envs.defaultEnvManager": "ms-python.python:conda",
+  "python-envs.defaultPackageManager": "ms-python.python:conda",
+  "python.terminal.executeInFileDir": true
+}
