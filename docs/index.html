@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fake Checker</title>
+<meta name="description" content="Check a second-hand designer listing for counterfeit and scam risk. Runs in your browser.">
+<meta property="og:title" content="Fake Checker - real, or rep?">
+<meta property="og:description" content="Check a second-hand designer listing for counterfeit and scam risk.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F1ECE2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F0F0D'/%3E%3Ctext x='16' y='25' font-family='Georgia,serif' font-style='italic' font-size='24' text-anchor='middle' fill='%23E5361A'%3E%3F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+
+<header class="mast">
+  <span class="mast-name">Fake Checker</span>
+  <a class="mast-meta" href="https://github.com/titou2534/Fake-Checker">GitHub</a>
+</header>
+
+<section class="lede">
+  <h1><span class="h-real">Real,</span> <em class="h-rep">or rep?</em></h1>
+  <div class="deck">
+    <p class="try">Try <button type="button" class="ex" data-ex="rep">a $60 Chrome&nbsp;Hearts hoodie</button> or <button type="button" class="ex" data-ex="legit">a Patagonia fleece</button>. <button type="button" class="ex ex-clear" data-ex="clear">Clear</button></p>
+  </div>
+</section>
+
+<main class="desk">
+  <form id="dossier" class="dossier" novalidate autocomplete="off">
+
+    <fieldset class="sec" data-field="platform">
+      <legend><span class="num">01</span><span class="sec-title">The listing</span></legend>
+      <div class="group" role="radiogroup" aria-labelledby="platform-label">
+        <p class="label" id="platform-label">Sold on</p>
+        <ul class="platforms" id="platforms"></ul>
+      </div>
+      <label class="field wide" data-field="brand">
+        <span class="label">Brand</span>
+        <input id="brand" name="brand" type="text" placeholder="Stone Island" list="brands" spellcheck="false">
+        <datalist id="brands"></datalist>
+      </label>
+      <div class="pair">
+        <label class="field" data-field="price">
+          <span class="label">Asking price</span>
+          <input id="price" name="price" type="number" inputmode="decimal" min="0" step="any" placeholder="0">
+        </label>
+        <label class="field" data-field="price">
+          <span class="label">Usual resale price</span>
+          <input id="market" name="market" type="number" inputmode="decimal" min="0" step="any" placeholder="0">
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="sec">
+      <legend><span class="num">02</span><span class="sec-title">The seller</span></legend>
+      <div class="trio">
+        <label class="field" data-field="reviews">
+          <span class="label">Reviews</span>
+          <input id="reviews" name="reviews" type="number" inputmode="numeric" min="0" step="1" placeholder="&ndash;">
+        </label>
+        <label class="field" data-field="rating">
+          <span class="label">Rating / 5</span>
+          <input id="rating" name="rating" type="number" inputmode="decimal" min="0" max="5" step="0.1" placeholder="&ndash;">
+        </label>
+        <label class="field" data-field="age">
+          <span class="label">Account age, days</span>
+          <input id="age" name="age" type="number" inputmode="numeric" min="0" step="1" placeholder="&ndash;">
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset class="sec">
+      <legend><span class="num">03</span><span class="sec-title">The photos</span></legend>
+      <label class="field short" data-field="photos">
+        <span class="label">How many</span>
+        <input id="photos" name="photos" type="number" inputmode="numeric" min="0" step="1" placeholder="&ndash;">
+      </label>
+      <div class="toggles">
+        <label class="toggle" data-field="stock"><input type="checkbox" id="stock"><span class="q">Stock photos only</span><span class="box" aria-hidden="true"></span></label>
+        <label class="toggle" data-field="tags"><input type="checkbox" id="tags"><span class="q">Shows tags or labels</span><span class="box" aria-hidden="true"></span></label>
+        <label class="toggle" data-field="bulk"><input type="checkbox" id="bulk"><span class="q">Same item in many sizes</span><span class="box" aria-hidden="true"></span></label>
+        <label class="toggle" data-field="offplatform"><input type="checkbox" id="offplatform"><span class="q">Wants to pay outside the app</span><span class="box" aria-hidden="true"></span></label>
+        <label class="toggle" data-field="ships"><input type="checkbox" id="ships"><span class="q">Ships from somewhere odd</span><span class="box" aria-hidden="true"></span></label>
+      </div>
+    </fieldset>
+
+    <fieldset class="sec" data-field="description">
+      <legend><span class="num">04</span><span class="sec-title">Description</span></legend>
+      <label class="field wide">
+        <span class="label sr-only">Listing description or seller messages</span>
+        <textarea id="description" name="description" rows="5" placeholder="Paste the listing text or seller's messages."></textarea>
+      </label>
+      <div class="markup" id="markup" hidden>
+        <p class="label">Flagged <span class="key"><mark class="k-flag">red flag</mark> <mark class="k-proof">good sign</mark></span></p>
+        <p class="markup-text" id="markup-text"></p>
+      </div>
+    </fieldset>
+  </form>
+
+  <aside class="readout" id="readout" data-level="none">
+    <div class="ro-block">
+      <p class="label">Fake</p>
+      <p class="ro-num"><span id="cf">&ndash;</span><span class="pc">%</span></p>
+    </div>
+    <div class="ro-block">
+      <p class="label">Scam</p>
+      <p class="ro-num"><span id="sc">&ndash;</span><span class="pc">%</span></p>
+    </div>
+    <p class="ro-verdict" id="verdict">Pick a platform to start.</p>
+    <a class="ro-link" href="#ledger">Why</a>
+  </aside>
+</main>
+
+<p class="sr-only" aria-live="polite" id="announce"></p>
+
+<section class="ledger" id="ledger" hidden>
+  <header class="ledger-head"><h2>Why</h2></header>
+  <ol class="rows" id="rows"></ol>
+  <div class="advice">
+    <h3>Before you pay</h3>
+    <ol id="advice"></ol>
+  </div>
+</section>
+
+<footer class="colophon">
+  <p>Estimates, not proof. Nothing you type leaves your browser.</p>
+</footer>
+
+<a class="dock" id="dock" href="#ledger" data-level="none" hidden>
+  <span class="dock-n"><span class="label">Fake</span><span id="dock-cf">&ndash;</span></span>
+  <span class="dock-n"><span class="label">Scam</span><span id="dock-sc">&ndash;</span></span>
+  <span class="dock-go">Why</span>
+</a>
+
+</body>
+</html>

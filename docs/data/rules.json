@@ -1,0 +1,171 @@
+{
+ "base": {
+  "counterfeit": -2.4,
+  "scam": -3.0
+ },
+ "high_risk_brands": [
+  "a bathing ape",
+  "adidas yeezy",
+  "amiri",
+  "arc'teryx",
+  "arcteryx",
+  "balenciaga",
+  "bape",
+  "bottega veneta",
+  "burberry",
+  "canada goose",
+  "cartier",
+  "celine",
+  "chanel",
+  "chrome hearts",
+  "corteiz",
+  "denim tears",
+  "dior",
+  "essentials",
+  "fear of god",
+  "gallery dept",
+  "goyard",
+  "gucci",
+  "hellstar",
+  "hermes",
+  "hermès",
+  "jordan",
+  "loewe",
+  "louis vuitton",
+  "lululemon",
+  "lv",
+  "maison margiela",
+  "miu miu",
+  "moncler",
+  "new balance",
+  "nike",
+  "north face",
+  "off white",
+  "off-white",
+  "palm angels",
+  "prada",
+  "ralph lauren",
+  "rick owens",
+  "rolex",
+  "saint laurent",
+  "sp5der",
+  "stone island",
+  "stussy",
+  "supreme",
+  "the north face",
+  "trapstar",
+  "travis scott",
+  "vivienne westwood",
+  "yeezy",
+  "ysl"
+ ],
+ "medium_risk_brands": [
+  "acne studios",
+  "ami",
+  "carhartt",
+  "cdg",
+  "comme des garcons",
+  "converse",
+  "dr martens",
+  "fendi",
+  "givenchy",
+  "golden goose",
+  "kenzo",
+  "kith",
+  "lacoste",
+  "levi's",
+  "levis",
+  "palace",
+  "patagonia",
+  "represent",
+  "salomon",
+  "tommy hilfiger",
+  "ugg",
+  "valentino",
+  "vans",
+  "versace"
+ ],
+ "platforms": {
+  "ebay": {
+   "label": "eBay",
+   "auth": "Authenticity Guarantee on eligible sneakers, handbags, watches, jewellery and some streetwear over a price threshold",
+   "protection": "eBay Money Back Guarantee when paid through eBay",
+   "cf": 0.0,
+   "scam": -0.3
+  },
+  "grailed": {
+   "label": "Grailed",
+   "auth": "Moderation team + optional authentication on some listings; no blanket authentication",
+   "protection": "Purchase protection when paid through Grailed checkout",
+   "cf": 0.0,
+   "scam": -0.2
+  },
+  "depop": {
+   "label": "Depop",
+   "auth": "No authentication service",
+   "protection": "Purchase Protection only when paid through Depop Payments",
+   "cf": 0.2,
+   "scam": 0.0
+  },
+  "vinted": {
+   "label": "Vinted",
+   "auth": "Optional Item Verification for designer items in some countries",
+   "protection": "Buyer Protection (fee) when paid in-app; short window to report problems after delivery",
+   "cf": 0.2,
+   "scam": 0.0
+  },
+  "poshmark": {
+   "label": "Poshmark",
+   "auth": "Posh Authenticate on items $500+ (free)",
+   "protection": "Posh Protect when paid through Poshmark",
+   "cf": 0.0,
+   "scam": -0.2
+  },
+  "mercari": {
+   "label": "Mercari",
+   "auth": "Authentication on select brands/categories",
+   "protection": "Buyer protection until you rate the order - don't rate before checking",
+   "cf": 0.1,
+   "scam": 0.0
+  },
+  "vestiaire": {
+   "label": "Vestiaire Collective",
+   "auth": "Items are checked by in-house authenticators",
+   "protection": "Platform-managed returns/refunds for failed authentication",
+   "cf": -1.2,
+   "scam": -0.6
+  },
+  "therealreal": {
+   "label": "The RealReal",
+   "auth": "All items authenticated in-house (consignment)",
+   "protection": "Company sells directly",
+   "cf": -1.2,
+   "scam": -1.0
+  },
+  "thredup": {
+   "label": "thredUP",
+   "auth": "Company-sourced inventory; luxury items checked",
+   "protection": "Company sells directly",
+   "cf": -0.8,
+   "scam": -1.0
+  },
+  "social": {
+   "label": "Instagram / Facebook / Telegram / other",
+   "auth": "None",
+   "protection": "None unless you pay with a card or PayPal Goods & Services",
+   "cf": 0.8,
+   "scam": 1.2
+  }
+ },
+ "auth_thresholds": {
+  "ebay": 100,
+  "poshmark": 500
+ },
+ "regex": {
+  "REPLICA_TERMS": "\\b1\\s?:\\s?1\\b|\\bUA\\b|unauthori[sz]ed authentic|\\bmirror\\b|\\baaa\\+?\\b|\\breps?\\b|replica|inspired|\\bdupe\\b|best (?:version|batch)|\\bbatch\\b|\\bPK\\b|\\bLJR\\b|factory (?:direct|seconds)|\\boem\\b|same as (?:retail|original)",
+  "OFFPLATFORM_TERMS": "whats ?app|telegram|text me|email me|dm (?:me )?(?:on|via) (?:insta|ig)|outside (?:the )?app|friends (?:and|&) family|\\bf ?& ?f\\b|zelle|cash ?app|venmo|wire|gift ?card|crypto|bitcoin",
+  "URGENCY_TERMS": "\\burgent|today only|quick sale|need gone|first come|act fast|moving sale",
+  "BULK_TERMS": "all sizes|any size|multiple (?:sizes|available)|in stock|restock|wholesale|bulk|\\d+\\s?(?:pcs|pieces|units) available",
+  "PROOF_TERMS": "receipt|proof of purchase|invoice|authenticated by|legit ?check(?:ed)?|checkcheck|entrupy|legitgrails|order confirmation|bought (?:from|at) (?:the )?(?:store|boutique|snkrs)"
+ }
+}

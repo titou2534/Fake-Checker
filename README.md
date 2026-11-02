@@ -8,6 +8,21 @@ Vestiaire, The RealReal, thredUP, or social media) and gives two scores:
 
 It also lists the reasons for each score and tells you what to do next.
 
+## Website
+
+**https://titou2534.github.io/Fake-Checker/**: nothing to install. The site in `docs/` scores
+listings entirely in your browser: `docs/score.js` is a JavaScript port of `risk.py`, and the text
+model, platform stats and rules are exported to `docs/data/` as JSON. Nothing you type is sent anywhere.
+
+After retraining or changing `risk.py`, refresh the site's data and check the two versions still agree:
+
+```bash
+python export_web.py        # writes docs/data/*.json
+python test_web_scoring.py  # needs Node.js; 400 random listings must score identically
+```
+
+To preview locally: `python -m http.server --directory docs`, then open http://localhost:8000.
+
 ## Quick start
 
 The repo ships with the trained model and the platform stats, so this is enough to use the app:
